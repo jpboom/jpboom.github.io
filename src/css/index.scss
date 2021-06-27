@@ -1,0 +1,52 @@
+@use "./reset.css";
+@use "./variables.scss";
+
+:root {
+  --shadow-color: #FA6900;
+  --shadow-color-light: white;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  background-blend-mode: multiply;
+  background-color: variables.$colorBackgroundPrimary;
+  background-image: radial-gradient(circle at center center, variables.$colorBackgroundPrimary, variables.$colorBackgroundSecondary), repeating-radial-gradient(circle at center center, variables.$colorBackgroundPrimary, variables.$colorBackgroundPrimary, 10px, transparent 20px, transparent 10px);
+  display: flex;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  opacity: 0.9;
+  min-height: 100vh;
+}
+
+
+.jpboom {
+  animation: neon 3s infinite;
+  color: variables.$colorWhite;
+  display: block;
+  font-size: 100px;
+  text-align: center;
+  width: 100%;
+}
+
+@keyframes neon {
+  0% {
+    text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+    0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+    0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+  }
+  50% {
+    text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+    0 0 5px var(--shadow-color-light), 0 0 15px var(--shadow-color-light), 0 0 25px var(--shadow-color-light),
+    0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 60px var(--shadow-color), 0 0 80px var(--shadow-color), 0 0 110px var(--shadow-color), 0 0 210px var(--shadow-color);
+  }
+  100% {
+    text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+    0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+    0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+  }
+}
