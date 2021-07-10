@@ -2,12 +2,7 @@
   "name": "JPBoom GitHub pages site",
   "scripts": {
     "start": "parcel serve ./src/index.html",
-    "build": "parcel build ./src/index.html"
-  },
-  "targets": {
-    "app": {
-      "distDir": "./docs"
-    }
+    "build": "parcel build ./src/index.html -d docs"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.0.0-beta.3.1",
