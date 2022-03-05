@@ -28,21 +28,12 @@ const components = {
 
 export default function Blog({ postMetadata, postContent }) {
   return (
-    <div>
-      <div className="blog-content">
-        <MDXRemote {...postContent} components={components} />
-      </div>
-
-      <style jsx>{`
-        .blog-content {
-          display: flex;
-          flex: 100%;
-          flex-direction: column;
-          margin: 1vw 25vw 1vw 25vw;
-          width: 50vw;
-          max-width: 50vw;
-        }
-      `}</style>
+    <div className="blog-content">
+      <MDXRemote
+        key={postMetadata.title}
+        {...postContent}
+        components={components}
+      />
     </div>
   );
 }
