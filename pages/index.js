@@ -3,27 +3,29 @@ import Link from 'next/link';
 import { getPostsMetaData } from '../lib/getPostsData.js';
 
 const Home = ({ postsData }) => (
-  <div className="info-container">
-    <p className="info-description">
-      Hi I&apos;m Batman, the saviour of Gotham City and I like to roam in
-      nights to bash the bad guys.
-    </p>
-    <p className="info-description">
-      But please don&apos;t call me as a source for <b>Corona Virus</b> and it
-      could be the <b>Joker</b> who might have started this mess.
-    </p>
-    <hr />
+  <>
+    <section className="info-container">
+      <p className="info-description">
+        Hi I&apos;m Batman, the saviour of Gotham City and I like to roam in
+        nights to bash the bad guys.
+      </p>
+      <p className="info-description">
+        But please don&apos;t call me as a source for <b>Corona Virus</b> and it
+        could be the <b>Joker</b> who might have started this mess.
+      </p>
+      <hr />
+    </section>
     {postsData.map((metadata) => {
       return (
-        <div key={metadata.id}>
+        <article key={metadata.id}>
           <Link href={`/blog/${metadata.id}`} key={metadata.title}>
             <a className="post-title">{metadata.title}</a>
           </Link>
           <p className="post-description">{metadata.description}</p>
-        </div>
+        </article>
       );
     })}
-  </div>
+  </>
 );
 
 export default Home;

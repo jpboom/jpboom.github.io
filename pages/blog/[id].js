@@ -3,38 +3,19 @@ import { MDXRemote } from 'next-mdx-remote';
 import { getAllPostsPath, getPostData } from '../../lib/getPostsData.js';
 
 const components = {
-  h1: (props) => (
-    <h1
-      style={{
-        fontSize: 'calc(1rem + 1.5vw)',
-        color: 'black',
-        margin: '1vh 0 1vh 0',
-      }}
-      {...props}
-    />
-  ),
-
-  p: (props) => (
-    <p
-      style={{
-        fontSize: 'calc(1rem + 0.1vw)',
-        color: '#000000e6',
-        margin: '0vh 0 1vh 0',
-      }}
-      {...props}
-    />
-  ),
+  h1: (props) => <h1 {...props} />,
+  p: (props) => <p {...props} />,
 };
 
 export default function Blog({ postMetadata, postContent }) {
   return (
-    <div className="blog-content">
+    <article className="blog-content">
       <MDXRemote
         key={postMetadata.title}
         {...postContent}
         components={components}
       />
-    </div>
+    </article>
   );
 }
 
