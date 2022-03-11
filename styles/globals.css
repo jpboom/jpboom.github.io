@@ -1,5 +1,7 @@
 html,
 body {
+  background: #eceff4;
+  color: #2e3440;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
@@ -20,7 +22,7 @@ body {
 }
 
 a {
-  color: darkblue;
+  color: #5e81ac;
   text-decoration: none;
   position: relative;
   z-index: 1;
@@ -35,7 +37,7 @@ a::after {
   left: -2px;
   right: -2px;
   z-index: -1;
-  background: lightgray;
+  background: #d8dee9;
   transition: all 300ms;
 }
 
@@ -51,13 +53,13 @@ section {
 @media (prefers-color-scheme: dark) {
   html,
   body {
-    background: #1a1110;
-    color: #fefefe;
+    background: #2e3440;
+    color: #eceff4;
   }
   a {
-    color: #00bfff;
+    color: #88c0d0;
   }
   a::after {
-    background: #414a4c;
+    background: #4c566a;
   }
 }
