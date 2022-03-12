@@ -9,13 +9,15 @@ const components = {
 
 export default function Blog({ postMetadata, postContent }) {
   return (
-    <article className="blog-content">
-      <MDXRemote
-        key={postMetadata.title}
-        {...postContent}
-        components={components}
-      />
-    </article>
+    <section>
+      <article>
+        <MDXRemote
+          key={postMetadata.title}
+          {...postContent}
+          components={components}
+        />
+      </article>
+    </section>
   );
 }
 

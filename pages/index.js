@@ -4,27 +4,32 @@ import { getPostsMetaData } from '../lib/getPostsData.js';
 
 const Home = ({ postsData }) => (
   <>
-    <section className="info-container">
-      <p className="info-description">
+    <section>
+      <p>
         Hi I&apos;m Batman, the saviour of Gotham City and I like to roam in
         nights to bash the bad guys.
       </p>
-      <p className="info-description">
-        But please don&apos;t call me as a source for <b>Corona Virus</b> and it
-        could be the <b>Joker</b> who might have started this mess.
+      <p>
+        But please don&apos;t call me as a source for{' '}
+        <strong>Corona Virus</strong> and it could be the <strong>Joker</strong>{' '}
+        who might have started this mess.
       </p>
-      <hr />
     </section>
-    {postsData.map((metadata) => {
-      return (
-        <article key={metadata.id}>
-          <Link href={`/blog/${metadata.id}`} key={metadata.title}>
-            <a className="post-title">{metadata.title}</a>
-          </Link>
-          <p className="post-description">{metadata.description}</p>
-        </article>
-      );
-    })}
+    <section>
+      {postsData.map((metadata, index) => (
+        <React.Fragment key={metadata.id}>
+          {index !== 0 && <hr />}
+          <article>
+            <p>
+              <Link href={`/blog/${metadata.id}`} key={metadata.title}>
+                <a>{metadata.title}</a>
+              </Link>
+            </p>
+            <p>{metadata.description}</p>
+          </article>
+        </React.Fragment>
+      ))}
+    </section>
   </>
 );
 
