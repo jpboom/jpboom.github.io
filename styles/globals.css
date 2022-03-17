@@ -26,10 +26,18 @@ body {
         transparent 80%,
         transparent
       )
-      67.5px 67.5px,
-    linear-gradient(#d8dee9 5.4px, transparent 5.4px) 0 -2.7px,
-    linear-gradient(90deg, #d8dee9 5.4px, #eceff4 5.4px) -2.7px 0;
-  background-size: 135px 135px, 135px 135px, 67.5px 67.5px, 67.5px 67.5px;
+      35px 35px,
+    linear-gradient(
+        #d8dee9 2.8000000000000003px,
+        transparent 2.8000000000000003px
+      )
+      0 -1.4000000000000001px,
+    linear-gradient(
+        90deg,
+        #d8dee9 2.8000000000000003px,
+        #eceff4 2.8000000000000003px
+      ) -1.4000000000000001px 0;
+  background-size: 70px 70px, 70px 70px, 35px 35px, 35px 35px;
 }
 
 body {
@@ -107,10 +115,18 @@ hr {
           transparent 80%,
           transparent
         )
-        67.5px 67.5px,
-      linear-gradient(#3b4252 5.4px, transparent 5.4px) 0 -2.7px,
-      linear-gradient(90deg, #3b4252 5.4px, #2e3440 5.4px) -2.7px 0;
-    background-size: 135px 135px, 135px 135px, 67.5px 67.5px, 67.5px 67.5px;
+        35px 35px,
+      linear-gradient(
+          #3b4252 2.8000000000000003px,
+          transparent 2.8000000000000003px
+        )
+        0 -1.4000000000000001px,
+      linear-gradient(
+          90deg,
+          #3b4252 2.8000000000000003px,
+          #2e3440 2.8000000000000003px
+        ) -1.4000000000000001px 0;
+    background-size: 70px 70px, 70px 70px, 35px 35px, 35px 35px;
   }
   a {
     color: #88c0d0;

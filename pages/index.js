@@ -5,20 +5,17 @@ import { getPostsMetaData } from '../lib/getPostsData.js';
 const Home = ({ postsData }) => (
   <>
     <section>
+      <h1>jpboom</h1>
       <p>
-        Hi I&apos;m Batman, the saviour of Gotham City and I like to roam in
-        nights to bash the bad guys.
-      </p>
-      <p>
-        But please don&apos;t call me as a source for{' '}
-        <strong>Corona Virus</strong> and it could be the <strong>Joker</strong>{' '}
-        who might have started this mess.
+        This is my personal project site. It's not for or about anything
+        specific. It will keep changing as long as I don't get bored of it.
       </p>
     </section>
     <section>
+      <h2>Blog</h2>
       {postsData.map((metadata, index) => (
         <React.Fragment key={metadata.id}>
-          {index !== 0 && <hr />}
+          <hr />
           <article>
             <p>
               <Link href={`/blog/${metadata.id}`} key={metadata.title}>
