@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      @keyframes vibrate-left {
+        from {
+          left: 0px;
+        }
+
+        to {
+          left: -100px;
+        }
+      }
+
+      @keyframes vibrate-right {
+        from {
+          right: 0px;
+        }
+
+        to {
+          right: -100px;
+        }
+      }
+
+      body {
+        height: 100vh;
+        background-image: repeating-radial-gradient(
+          circle at 50% 50%,
+          #ff00f7,
+          #980093 15px,
+          #7300ff 15px,
+          #440098 30px
+        );
+        &::before {
+          mix-blend-mode: multiply;
+          background-image: repeating-radial-gradient(
+            circle at 25% 25%,
+            #ff00f7,
+            #98009300 15px,
+            #7300ff 15px,
+            #44009800 30px
+          );
+          content: "";
+          position: fixed;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          z-index: 0;
+          animation: 5s ease-in-out 0s infinite alternate vibrate-left;
+        }
+        &::after {
+          mix-blend-mode: overlay;
+          background-image: repeating-radial-gradient(
+            circle at 75% 75%,
+            #ff00f700,
+            #980093 15px,
+            #7300ff00 15px,
+            #440098 30px
+          );
+          content: "";
+          position: fixed;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          z-index: 0;
+          animation: 5.5s ease-in-out 0s infinite alternate vibrate-right;
+        }
+      }
+    </style>
+  </head>
+  <body></body>
+</html>
